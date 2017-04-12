@@ -4,7 +4,7 @@ FrOG: Framework for Optimization in Grasshopper
 <br><br>
 This project intends to make it easier to link optimization algorithms to Grasshopper (http://www.grasshopper3d.com/).
 FrOG handles all interactions with Grasshopper and provides a GUI. 
-<br><br>
+<br><br><br>
 How to use the component: 
 <br>
 - Copy the FrOG.gha into your Grasshopper components folder (open Rhino, enter "GrasshopperFolders", "Components" into your console).

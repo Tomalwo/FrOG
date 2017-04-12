@@ -24,10 +24,10 @@ namespace FrOG
             comboBoxPresets.SelectedIndex = 0;
 
             //Log Default File Name
-            textBoxLogName.Text = $"{DateTime.Now.ToString("yyMMdd")}_log";
+            textBoxLogName.Text = String.Format("{0}_log", DateTime.Now.ToString("yyMMdd"));
 
             //Hide Save State Tab
-            Tabs.TabPages.Remove(Tabs.TabPages[3]);
+            //Tabs.TabPages.Remove(Tabs.TabPages[3]);
 
             //Disable Chart Axis
             bestValueChart.ChartAreas[0].AxisX.Enabled = AxisEnabled.False;
@@ -91,8 +91,8 @@ namespace FrOG
             OptimizationLoop.BolLog = CheckBoxLog.Checked;
             if (CheckBoxLog.Checked) OptimizationLoop.LogName = textBoxLogName.Text;
 
-            OptimizationLoop.SaveStateName = textBoxStateName.Text;
-            OptimizationLoop.SaveStateFrequency = (int)numUpDownSaveStateFrequency.Value;
+            //OptimizationLoop.SaveStateName = textBoxStateName.Text;
+            //OptimizationLoop.SaveStateFrequency = (int)numUpDownSaveStateFrequency.Value;
             OptimizationLoop.BolMaximize = radioButtonMaximize.Checked;
             OptimizationLoop.ExpertSettings = textBoxExpertSettings.Text.Replace(Environment.NewLine, " ");
             OptimizationLoop.PresetIndex = comboBoxPresets.SelectedIndex;

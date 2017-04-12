@@ -28,33 +28,33 @@ namespace FrOG
 
         public void LogIteration(int iteration)
         {
-            LogNewLine($"Iteration {iteration}" + Environment.NewLine, true);
+            LogNewLine(String.Format("Iteration {0}" + Environment.NewLine, iteration), true);
         }
 
         public void LogParameters(string parameters, Stopwatch stopwatchLoop)
         {
-            LogNewLine($"Time to get parameters: {stopwatchLoop.Elapsed:hh\\:mm\\:ss}", false);
-            LogNewLine($"Parameters to evaluate: {parameters}", false);
+            LogNewLine(String.Format("Time to get parameters: {0}", stopwatchLoop.Elapsed), false);
+            LogNewLine(String.Format("Parameters to evaluate: {0}", parameters), false);
         }
 
         public void LogFunctionValue(double value, Stopwatch stopwatchLoop)
         {
-            LogNewLine($"Time to get function value: {stopwatchLoop.Elapsed:hh\\:mm\\:ss}", false);
+            LogNewLine(String.Format("Time to get function value: {0}", stopwatchLoop.Elapsed), false);
             LogNewLine("Function Value: " + value + Environment.NewLine, false);
         }
 
         public void LogCurrentBest(IList<decimal> minParams, double minValue, Stopwatch stopwatchTotal, int j)
         {
-            LogNewLine($"Current Time: {stopwatchTotal.Elapsed:hh\\:mm\\:ss}", false);
-            LogNewLine($"Current Best Value: {minValue} ({j})", false);
+            LogNewLine(String.Format("Current Time: {0}", stopwatchTotal.Elapsed), false);
+            LogNewLine(String.Format("Current Best Value: {0} ({1})", minValue, j), false);
             LogNewLine("Current Best Parameters: " + string.Join(",", minParams) + Environment.NewLine, true);
         }
 
         public void LogResult(OptimizationResult result, Stopwatch stopwatchTotal, int maxIter, int maxIterNoProgress, double maxDuration)
         {
             LogNewLine(GetResultString(result, maxIter, maxIterNoProgress, maxDuration) + Environment.NewLine, false);
-            LogNewLine($"Total time: {stopwatchTotal.Elapsed:hh\\:mm\\:ss}", false);
-            LogNewLine($"Best Value: {result.Value}", false);
+            LogNewLine(String.Format("Total time: {0}", stopwatchTotal.Elapsed), false);
+            LogNewLine(String.Format("Best Value: {0}", result.Value), false);
             LogNewLine("Best Parameters: " + string.Join(",", result.Parameters), true);
 
             _log.Close();
@@ -73,16 +73,16 @@ namespace FrOG
                     strResult = "Optimization stopped by FrOG";
                     break;
                 case OptimizationResult.ResultType.SolverStopped:
-                    strResult = $"Optimization stopped by solver after {result.Iterations} iterations";
+                    strResult = String.Format("Optimization stopped by solver after {0} iterations", result.Iterations);
                     break;
                 case OptimizationResult.ResultType.NoImprovement:
-                    strResult = $"No improvement after ({maxIterNoProgress}) iterations";
+                    strResult = String.Format("No improvement after ({0}) iterations", maxIterNoProgress);
                     break;
                 case OptimizationResult.ResultType.MaximumEvals:
-                    strResult = $"Maximum number of iterations ({maxIter}) reached";
+                    strResult = String.Format("Maximum number of iterations ({0}) reached", maxIter);
                     break;
                 case OptimizationResult.ResultType.MaximumTime:
-                    strResult = $"Maximum number of seconds ({maxDuration}) reached";
+                    strResult = String.Format("Maximum number of seconds ({0}) reached", maxDuration);
                     break;
                 case OptimizationResult.ResultType.Unknown:
                     strResult = "Optimization stopped for an unknown reason";
@@ -91,7 +91,7 @@ namespace FrOG
                     strResult = "Optimization stopped for an unknown reason";
                     break;
             }
-            return strResult + Environment.NewLine + $"Best Value: {result.Value}";
+            return strResult + Environment.NewLine + String.Format("Best Value: {0}", result.Value);
         }
     }
 }

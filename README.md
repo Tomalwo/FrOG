@@ -1,4 +1,5 @@
 FrOG: Framework for Optimization in Grasshopper
+
 Developed by Thomas Wortmann and Akbar Zuardin with contributions by Dimitry Demin and Christoph Waibel.
 
 This project intends to make it easier to link optimization algorithms to Grasshopper (http://www.grasshopper3d.com/).

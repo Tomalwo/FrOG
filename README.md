@@ -1,7 +1,7 @@
 FrOG: Framework for Optimization in Grasshopper
 <br>Branch for Visual Studio 2012 (no C# 6)
-<br>Developed by Thomas Wortmann and Akbar Zuardin with contributions by Dimitry Demin and Christoph Waibel.
-<br>
+<br><br>Developed by Thomas Wortmann and Akbar Zuardin with contributions by Dimitry Demin and Christoph Waibel.
+<br><br>
 This project intends to make it easier to link optimization algorithms to Grasshopper (http://www.grasshopper3d.com/).
 FrOG handles all interactions with Grasshopper and provides a GUI. 
 <br><br>

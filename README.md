@@ -8,4 +8,7 @@ To add a new solver, implement the ISolver interface and add the resulting solve
 The solver should appear in the GUI, with different presets of settings listed seperatly.
 HillclimberInterface.cs is provided as an example that links Hillclimber.cs to FrOG.
 
+Please feel free to use this code (which comes without any warranties) and to contribute improvements to the Framework.
+When using FrOG for academic research, please cite this repository.
+
 Happy optimizing!

@@ -26,9 +26,6 @@ namespace FrOG
             //Log Default File Name
             textBoxLogName.Text = $"{DateTime.Now.ToString("yyMMdd")}_log";
 
-            //Hide Save State Tab
-            Tabs.TabPages.Remove(Tabs.TabPages[3]);
-
             //Disable Chart Axis
             bestValueChart.ChartAreas[0].AxisX.Enabled = AxisEnabled.False;
             bestValueChart.ChartAreas[0].AxisX2.Enabled = AxisEnabled.False;

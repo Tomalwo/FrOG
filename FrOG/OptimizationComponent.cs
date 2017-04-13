@@ -76,7 +76,6 @@ namespace FrOG
 
         protected override void SolveInstance(IGH_DataAccess da)
         {
-            da.SetData(0, this);
         }
         #endregion
 

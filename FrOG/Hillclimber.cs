@@ -157,20 +157,6 @@ namespace FrOG
 
         }
 
-        /// <summary>
-        /// Normal distributed random number, normalized between 0 and 1. Assuming range: -5 to +5.
-        /// </summary>
-        /// <param name="mean">Mean of the distribution.</param>
-        /// <param name="stdDev">Standard deviation of the distribution.</param>
-        /// <returns>Normal distributed random number, normalized between 0 and 1.</returns>
-        /// 
-        public double NextGaussianNorm(double mean, double stdDev)
-        {
-            double gauss = this.NextGaussian(mean, stdDev);
-            if (gauss < -5) gauss = -5;
-            else if (gauss > 5) gauss = 5;
-            return (gauss + 5) / 10;
-        }
 
     }
 }

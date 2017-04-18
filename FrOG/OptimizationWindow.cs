@@ -184,10 +184,20 @@ namespace FrOG
 
         private void comboBoxPresets_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            groupBox2.Text = SolverList.PresetNames[comboBoxPresets.SelectedIndex];
         }
 
         private void FrOGWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numUpDownIterations_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

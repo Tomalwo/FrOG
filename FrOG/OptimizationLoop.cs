@@ -248,12 +248,14 @@ namespace FrOG
             //Maximum Evaluations reached
             if (BolMaxIter && _iterations >= MaxIter)
             {
+                _worker.CancelAsync();
                 _resultType = OptimizationResult.ResultType.MaximumEvals;
                 return double.NaN;
             }
             //Maximum Duration reached
             if (BolMaxDuration && _stopwatchTotal.Elapsed.TotalSeconds >= MaxDuration)
             {
+                _worker.CancelAsync();
                 _resultType = OptimizationResult.ResultType.MaximumTime;
                 return double.NaN;
             }

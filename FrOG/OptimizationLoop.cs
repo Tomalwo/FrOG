@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace FrOG
@@ -29,8 +28,6 @@ namespace FrOG
         //BolLog Settings
         public static bool BolLog;
         public static string LogName;
-        public static string SaveStateName;
-        public static int SaveStateFrequency;
 
         //Variables
         private static BackgroundWorker _worker;

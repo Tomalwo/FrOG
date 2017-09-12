@@ -88,8 +88,6 @@ namespace FrOG
             OptimizationLoop.BolLog = CheckBoxLog.Checked;
             if (CheckBoxLog.Checked) OptimizationLoop.LogName = textBoxLogName.Text;
 
-            OptimizationLoop.SaveStateName = textBoxStateName.Text;
-            OptimizationLoop.SaveStateFrequency = (int)numUpDownSaveStateFrequency.Value;
             OptimizationLoop.BolMaximize = radioButtonMaximize.Checked;
             OptimizationLoop.ExpertSettings = textBoxExpertSettings.Text.Replace(Environment.NewLine, " ");
             OptimizationLoop.PresetIndex = comboBoxPresets.SelectedIndex;

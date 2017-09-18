@@ -1,0 +1,7 @@
+C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\FrOG.csprojResolveAssemblyReference.cache
+C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\FrOG.OptimizationWindow.resources
+C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\FrOG.csproj.GenerateResource.Cache
+C:\Opossum\Opossum2_0_Proto_A.dll
+C:\Opossum\Opossum2_0_Proto_A.pdb
+C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\Opossum2_0_Proto_A.dll
+C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\Opossum2_0_Proto_A.pdb

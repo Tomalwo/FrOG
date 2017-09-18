@@ -13,7 +13,7 @@ namespace FrOG
         private OptimizationWindow _optimizationWindow;
 
         //Generate Component GUID
-        public override Guid ComponentGuid => new Guid("{DBFD1CC2-F8DC-4C43-8071-B584936601A0}");
+        public override Guid ComponentGuid => new Guid("{DBFD1CC2-F8DC-4C43-8071-B584936601A1}");
         #endregion
 
         #region Constructor

@@ -342,6 +342,7 @@ namespace FrOG
             0,
             0,
             0});
+            this.numUpDownIterations.ValueChanged += new System.EventHandler(this.numUpDownIterations_ValueChanged);
             // 
             // CheckBoxDuration
             // 
@@ -378,6 +379,7 @@ namespace FrOG
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBoxExpertSettings
             // 

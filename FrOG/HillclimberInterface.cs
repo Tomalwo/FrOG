@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 
 namespace FrOG
@@ -34,9 +35,11 @@ namespace FrOG
             _presets.Add("Hillclimber", standardSettings);
         }
 
-        public bool RunSolver(List<Variable> variables, Func<IList<decimal>, double> evaluate, string preset, string installFolder, string documentPath)
+        public bool RunSolver(List<Variable> variables, Func<IList<decimal>, double> evaluate, string preset, string expertsettings, string installFolder, string documentPath)
         {
             var settings = _presets[preset];
+
+            //System.Windows.Forms.MessageBox.Show(expertsettings);     //use expertsettings to input custom solver parameters
 
             var dvar = variables.Count;
             var lb = new double[dvar];
@@ -88,11 +91,6 @@ namespace FrOG
         {
             return Xopt;
         }
-
-        /// <summary>
-        /// Get the cost value of the final solution.
-        /// </summary>
-        /// <returns>Cost value.</returns>
 
         public IEnumerable<string> GetPresetNames()
         {

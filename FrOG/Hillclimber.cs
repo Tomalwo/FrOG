@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FrOG
 {
@@ -95,16 +99,20 @@ namespace FrOG
                 }
                 double fxtest = evalfnc(xtest);
 
+                if (Double.IsNaN(fxtest)) return;
+
                 if (fxtest < fx)
                 {
                     xtest.CopyTo(x, 0);
                     fx = fxtest;
+
+                    xopt = new double[n];
+                    x.CopyTo(xopt, 0);
+                    fxopt = fx;
                 }
             }
 
-            xopt = new double[n];
-            x.CopyTo(xopt, 0);
-            fxopt = fx;
+           
 
         }
 
@@ -153,20 +161,6 @@ namespace FrOG
 
         }
 
-        /// <summary>
-        /// Normal distributed random number, normalized between 0 and 1. Assuming range: -5 to +5.
-        /// </summary>
-        /// <param name="mean">Mean of the distribution.</param>
-        /// <param name="stdDev">Standard deviation of the distribution.</param>
-        /// <returns>Normal distributed random number, normalized between 0 and 1.</returns>
-        /// 
-        public double NextGaussianNorm(double mean, double stdDev)
-        {
-            double gauss = this.NextGaussian(mean, stdDev);
-            if (gauss < -5) gauss = -5;
-            else if (gauss > 5) gauss = 5;
-            return (gauss + 5) / 10;
-        }
 
     }
 }

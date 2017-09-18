@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FrOG
@@ -10,6 +11,8 @@ namespace FrOG
     internal static class OptimizationLoop
     {
         //Settings
+        public static string solversettings;
+
         public static bool BolMaximize;
         public static bool BolMaxIter;
         public static int MaxIter;
@@ -28,6 +31,8 @@ namespace FrOG
         //BolLog Settings
         public static bool BolLog;
         public static string LogName;
+        public static string SaveStateName;
+        public static int SaveStateFrequency;
 
         //Variables
         private static BackgroundWorker _worker;
@@ -71,19 +76,30 @@ namespace FrOG
 
             while (finishedRuns < Runs)
             {
-                if (_worker == null || _worker.CancellationPending) break;
-
+                //MessageBox.Show(finishedRuns.ToString());
+                if (_worker == null)
+                {
+                    //MessageBox.Show("worker is null");
+                    break;
+                }
+                if (_worker.CancellationPending)
+                {
+                    //MessageBox.Show("worker cancellation pending");
+                    break;
+                }
                 //Log
                 if (BolLog) LogName = logBaseName;
-                if (BolRuns) LogName += $"_{finishedRuns + 1}";
+                if (BolRuns) LogName += String.Format("_{0}", finishedRuns + 1);
 
                 //Run RBFOpt
                 var result = RunOptimizationLoop(_worker, PresetIndex);
 
                 //Exit if there is no result
                 if (result == null)
+                {
+                    //MessageBox.Show("result is null");
                     break;
-
+                }
                 //Check is there is a better result
                 if ((!BolMaximize && result.Value < bestResult.Value) || (BolMaximize && result.Value > bestResult.Value))
                     bestResult = result;
@@ -104,9 +120,10 @@ namespace FrOG
             if (!BolRuns)
                 MessageBox.Show(Log.GetResultString(bestResult, MaxIter, MaxIterNoProgress, MaxDuration), "FrOG Result");
             else
-                MessageBox.Show($"Finished {finishedRuns} runs" + Environment.NewLine + $"Overall best value {bestResult.Value}", "FrOG Result");
-
-            _worker?.CancelAsync();
+                MessageBox.Show(String.Format("Finished {0} runs" + Environment.NewLine + "Overall best value {1}", finishedRuns, bestResult.Value), "FrOG Result");
+            
+            if(_worker != null) _worker.CancelAsync();
+            //_worker?.CancelAsync();
         }
 
         //Run RBFOpt(Main function)
@@ -136,14 +153,15 @@ namespace FrOG
             var preset = SolverList.GetPresetByIndex(presetIndex);
 
             //Prepare Log
-            _log = BolLog ? new Log($"{Path.GetDirectoryName(_ghInOut.DocumentPath)}\\{LogName}.txt") : null;
+            _log = BolLog ? new Log(String.Format("{0}\\{1}.txt", Path.GetDirectoryName(_ghInOut.DocumentPath), LogName)) : null;
 
-            //Log Settings       
-            _log?.LogSettings(preset);
+            //Log Settings
+            if(_log!= null) _log.LogSettings(preset);
+            //_log?.LogSettings(preset);
 
             //Run Solver
             //MessageBox.Show("Starting Solver", "FrOG Debug");
-            var bolSolverStarted = solver.RunSolver(variables, EvaluateFunction, preset, _ghInOut.ComponentFolder, _ghInOut.DocumentPath);
+            var bolSolverStarted = solver.RunSolver(variables, EvaluateFunction, preset, solversettings, _ghInOut.ComponentFolder, _ghInOut.DocumentPath);
 
             if (!bolSolverStarted)
             {
@@ -165,14 +183,16 @@ namespace FrOG
             _stopwatchTotal.Stop();
 
             var result = new OptimizationResult(_bestValue, _bestParams, _iterations, _resultType);
-            _log?.LogResult(result, _stopwatchTotal, MaxIter, MaxIterNoProgress, MaxDuration);
+            if (_log != null) _log.LogResult(result, _stopwatchTotal, MaxIter, MaxIterNoProgress, MaxDuration);
+            //_log?.LogResult(result, _stopwatchTotal, MaxIter, MaxIterNoProgress, MaxDuration);
 
             return result;
         }
 
         public static double EvaluateFunction(IList<decimal> values)
         {
-            _log?.LogIteration(_iterations + 1);
+            if(_log!=null) _log.LogIteration(_iterations + 1);
+            //_log?.LogIteration(_iterations + 1);
             //var strMessage = "Iteration " + _iterations + Environment.NewLine;
             //strMessage += $"Maximize: {BolMaximize}" + Environment.NewLine;
             //MessageBox.Show(strMessage);
@@ -185,7 +205,8 @@ namespace FrOG
             }
 
             //Log Parameters
-            _log?.LogParameters(string.Join(",", values), _stopwatchLoop);
+            if(_log!=null) _log.LogParameters(string.Join(",", values), _stopwatchLoop);
+            //_log?.LogParameters(string.Join(",", values), _stopwatchLoop);
 
             _stopwatchLoop.Reset();
             _stopwatchLoop.Start();
@@ -207,7 +228,8 @@ namespace FrOG
             //MessageBox.Show($"Function value: {objectiveValue}");
 
             //BolLog Solution
-            _log?.LogFunctionValue(objectiveValue, _stopwatchLoop);
+            if(_log!=null) _log.LogFunctionValue(objectiveValue, _stopwatchLoop);
+            //_log?.LogFunctionValue(objectiveValue, _stopwatchLoop);
 
             _iterations += 1;
             _iterationsCurrentBest += 1;
@@ -226,7 +248,8 @@ namespace FrOG
             _worker.ReportProgress(0, BestValues);
 
             //BolLog Minimum
-            _log?.LogCurrentBest(_bestParams, _bestValue, _stopwatchTotal, _iterationsCurrentBest);
+            if(_log!=null) _log.LogCurrentBest(_bestParams, _bestValue, _stopwatchTotal, _iterationsCurrentBest);
+            //_log?.LogCurrentBest(_bestParams, _bestValue, _stopwatchTotal, _iterationsCurrentBest);
 
             //Optimization Results
             //No Improvement
@@ -238,12 +261,14 @@ namespace FrOG
             //Maximum Evaluations reached
             if (BolMaxIter && _iterations >= MaxIter)
             {
+                //_worker.CancelAsync();
                 _resultType = OptimizationResult.ResultType.MaximumEvals;
                 return double.NaN;
             }
             //Maximum Duration reached
             if (BolMaxDuration && _stopwatchTotal.Elapsed.TotalSeconds >= MaxDuration)
             {
+                //_worker.CancelAsync();
                 _resultType = OptimizationResult.ResultType.MaximumTime;
                 return double.NaN;
             }

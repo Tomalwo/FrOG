@@ -12,8 +12,11 @@ namespace FrOG
         #region Variables
         private OptimizationWindow _optimizationWindow;
 
-        //Generate Component GUID
-        public override Guid ComponentGuid => new Guid("{DBFD1CC2-F8DC-4C43-8071-B584936601A0}");
+
+        public override Guid ComponentGuid 
+        {
+            get { return new Guid("{e0938e5f-5772-4a10-be73-87bdcee0ce43}"); }
+        }
         #endregion
 
         #region Constructor
@@ -76,6 +79,7 @@ namespace FrOG
 
         protected override void SolveInstance(IGH_DataAccess da)
         {
+            //da.SetData(0, this);
         }
         #endregion
 

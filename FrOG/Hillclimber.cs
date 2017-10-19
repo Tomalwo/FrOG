@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrOG
 {
@@ -99,7 +95,7 @@ namespace FrOG
                 }
                 double fxtest = evalfnc(xtest);
 
-                if (Double.IsNaN(fxtest)) return;
+                if (double.IsNaN(fxtest)) return;
 
                 if (fxtest < fx)
                 {
@@ -111,9 +107,6 @@ namespace FrOG
                     fxopt = fx;
                 }
             }
-
-           
-
         }
 
         /// <summary>

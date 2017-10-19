@@ -12,10 +12,9 @@ namespace FrOG
         #region Variables
         private OptimizationWindow _optimizationWindow;
 
-
         public override Guid ComponentGuid 
         {
-            get { return new Guid("{e0938e5f-5772-4a10-be73-87bdcee0ce43}"); }
+            get { return new Guid("{609e9f04-2625-444f-9dc5-6959db5950ad}"); }
         }
         #endregion
 

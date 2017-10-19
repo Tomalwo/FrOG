@@ -23,6 +23,7 @@ namespace FrOG
         public int VariableN { get { return Variables.Count; } }
 
         public OptimizationComponent OptimizationComponent { get; private set; }
+       
 
         //Variables as String
         public string VariablesStr
@@ -38,6 +39,9 @@ namespace FrOG
 
         //Get Document Directory
         public string DocumentPath { get { return _doc.FilePath; } }
+
+        //Get Document Name
+        public string DocumentName { get { return _doc.DisplayName; } }
 
         public GrasshopperInOut(OptimizationComponent component)
         {

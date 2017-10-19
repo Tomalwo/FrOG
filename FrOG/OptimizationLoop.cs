@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace FrOG
@@ -44,6 +43,7 @@ namespace FrOG
         private static OptimizationResult.ResultType _resultType;
 
         private static Log _log;
+        private static LoggerLog _loggerLog;
         private static Stopwatch _stopwatchTotal;
         private static Stopwatch _stopwatchLoop;
 
@@ -153,10 +153,12 @@ namespace FrOG
             var preset = SolverList.GetPresetByIndex(presetIndex);
 
             //Prepare Log
-            _log = BolLog ? new Log(String.Format("{0}\\{1}.txt", Path.GetDirectoryName(_ghInOut.DocumentPath), LogName)) : null;
+            //_log = BolLog ? new Log(String.Format("{0}\\{1}.txt", Path.GetDirectoryName(_ghInOut.DocumentPath), LogName)) : null;
+            _loggerLog = BolLog ? new LoggerLog(String.Format("{0}\\{1}.txt", Path.GetDirectoryName(_ghInOut.DocumentPath), LogName)) : null;
+
 
             //Log Settings
-            if(_log!= null) _log.LogSettings(preset);
+            if (_log!= null) _log.LogSettings(preset);
             //_log?.LogSettings(preset);
 
             //Run Solver
@@ -228,7 +230,8 @@ namespace FrOG
             //MessageBox.Show($"Function value: {objectiveValue}");
 
             //BolLog Solution
-            if(_log!=null) _log.LogFunctionValue(objectiveValue, _stopwatchLoop);
+            if(_log! = null) _log.LogFunctionValue(objectiveValue, _stopwatchLoop);
+            if (_loggerLog != null) _loggerLog.LogLoggerLine(_ghInOut.DocumentName,string.Join(",", values), objectiveValue);
             //_log?.LogFunctionValue(objectiveValue, _stopwatchLoop);
 
             _iterations += 1;
@@ -244,7 +247,7 @@ namespace FrOG
 
             BestValues.Add(_bestValue);
 
-            //Report Best Values
+            //Report Best Values 
             _worker.ReportProgress(0, BestValues);
 
             //BolLog Minimum

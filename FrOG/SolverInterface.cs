@@ -6,6 +6,7 @@ namespace FrOG
 {
     internal static class SolverList
     {
+        //Add solvers here
         public static List<ISolver> GetSolverList = new List<ISolver>() { new HillclimberInterface() };
 
         public static List<string> PresetNames
@@ -58,7 +59,7 @@ namespace FrOG
 
         public override string ToString()
         {
-            return String.Format("LowerB {0} UpperB {1} Integer {2}", LowerB, UpperB, Integer);
+            return string.Format("LowerB {0} UpperB {1} Integer {2}", LowerB, UpperB, Integer);
         }
     }
 

@@ -14,7 +14,7 @@ namespace FrOG
 
         public override Guid ComponentGuid 
         {
-            get { return new Guid("{609e9f04-2625-444f-9dc5-6959db5950ad}"); }
+            get { return new Guid("{9975d89e-9b54-4de5-95ac-d672f3998f69}"); }
         }
         #endregion
 

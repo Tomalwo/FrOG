@@ -230,7 +230,7 @@ namespace FrOG
             //MessageBox.Show($"Function value: {objectiveValue}");
 
             //BolLog Solution
-            if(_log! = null) _log.LogFunctionValue(objectiveValue, _stopwatchLoop);
+            if(_log != null) _log.LogFunctionValue(objectiveValue, _stopwatchLoop);
             if (_loggerLog != null) _loggerLog.LogLoggerLine(_ghInOut.DocumentName,string.Join(",", values), objectiveValue);
             //_log?.LogFunctionValue(objectiveValue, _stopwatchLoop);
 

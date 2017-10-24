@@ -307,7 +307,7 @@ namespace FrOG
             //var strMessage = "Starting new solution" + Environment.NewLine;
             //MessageBox.Show(strMessage);
 
-            _doc.NewSolution(true);
+            _doc.ScheduleSolution(1);
 
             //strMessage = "Started new solution" + Environment.NewLine;
             //MessageBox.Show(strMessage);

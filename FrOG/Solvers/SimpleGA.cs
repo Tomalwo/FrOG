@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 /*
  * Opt_SGA.cs
@@ -104,7 +105,7 @@ namespace FrOG.Solvers
             //}
 
             var random = new Random();
-            seedin = random.Next();
+            seedin = random.Next(-32768, 32767);
 
             var dvar = variables.Count;
             var lb = new double[dvar];
@@ -138,14 +139,12 @@ namespace FrOG.Solvers
                     GAsettings.Add("r", settings["r"]);
                     GAsettings.Add("elite", settings["elite"]);
                     int seed;
+
                     if (seedin != null)
-                    {
                         seed = Convert.ToInt16(seedin);
-                    }
-                    else
-                    {
+                    else 
                         seed = (int)settings["seed"];
-                    }
+                   
                     int itermax = (int)settings["itermax"];
 
                     var ga = new MetaheuristicsLibrary.SolversSO.SimpleGA(lb, ub, integer, itermax, eval, seed, GAsettings);

@@ -5,3 +5,8 @@ C:\Opossum\FrOG.dll
 C:\Opossum\FrOG.pdb
 C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\FrOG.dll
 C:\Users\thomas_wortmann\Source\Repos\FrOG\FrOG\obj\Release\FrOG.pdb
+C:\Users\Thomas\Source\Repos\FrOG\FrOG\obj\Release\FrOG.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Source\Repos\FrOG\FrOG\obj\Release\FrOG.OptimizationWindow.resources
+C:\Users\Thomas\Source\Repos\FrOG\FrOG\obj\Release\FrOG.csproj.GenerateResource.Cache
+C:\Users\Thomas\Source\Repos\FrOG\FrOG\obj\Release\FrOG.dll
+C:\Users\Thomas\Source\Repos\FrOG\FrOG\obj\Release\FrOG.pdb

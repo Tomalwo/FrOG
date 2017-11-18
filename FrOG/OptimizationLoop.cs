@@ -30,8 +30,6 @@ namespace FrOG
         //BolLog Settings
         public static bool BolLog;
         public static string LogName;
-        public static string SaveStateName;
-        public static int SaveStateFrequency;
 
         //Variables
         private static BackgroundWorker _worker;
@@ -171,7 +169,7 @@ namespace FrOG
                 return null;
             }
 
-            //Show Messagebox with RBFOpt error
+            //Show Messagebox with FrOG error
             if (worker.CancellationPending)
                 _resultType = OptimizationResult.ResultType.UserStopped;
             else if (_resultType == OptimizationResult.ResultType.SolverStopped || _resultType == OptimizationResult.ResultType.Unknown)

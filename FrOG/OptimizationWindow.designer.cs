@@ -399,6 +399,7 @@ namespace FrOG
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.Tabs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "OptimizationWindow";
             this.Load += new System.EventHandler(this.FrOGWindow_Load);
             this.tabOptimize.ResumeLayout(false);

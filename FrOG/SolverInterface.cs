@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrOG.Solvers;
 
 namespace FrOG
 {
     internal static class SolverList
     {
         //Add solvers here
-        public static List<ISolver> GetSolverList = new List<ISolver>() { new HillclimberInterface() };
+        public static List<ISolver> GetSolverList = new List<ISolver>() { new Hillclimber(), new SimpleGA() };
 
         public static List<string> PresetNames
         {

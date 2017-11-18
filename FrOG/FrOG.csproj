@@ -46,6 +46,10 @@
       <HintPath>D:\Dropbox\Opossum_Development\Ressources\Grasshopper.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MetaheuristicsLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Dropbox\Opossum_Development\Ressources\MetaheuristicsLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,8 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoggerLog.cs" />
-    <Compile Include="Hillclimber.cs" />
-    <Compile Include="HillclimberInterface.cs" />
+    <Compile Include="Solvers\HillclimberAlgorithm.cs" />
+    <Compile Include="Solvers\Hillclimber.cs" />
     <Compile Include="Parsing.cs" />
     <Compile Include="OptimizationWindow.cs">
       <SubType>Form</SubType>
@@ -78,6 +82,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SolverInterface.cs" />
+    <Compile Include="Solvers\SimpleGA.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="OptimizationWindow.resx">

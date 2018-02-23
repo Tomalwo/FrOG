@@ -1,0 +1,7 @@
+C:\Opossum\Opossum2_0_Proto_A.dll
+C:\Opossum\Opossum2_0_Proto_A.pdb
+C:\Users\1000880\Documents\GitHub\FrOG\FrOG\obj\Release\FrOG.csprojResolveAssemblyReference.cache
+C:\Users\1000880\Documents\GitHub\FrOG\FrOG\obj\Release\FrOG.OptimizationWindow.resources
+C:\Users\1000880\Documents\GitHub\FrOG\FrOG\obj\Release\FrOG.csproj.GenerateResource.Cache
+C:\Users\1000880\Documents\GitHub\FrOG\FrOG\obj\Release\Opossum2_0_Proto_A.dll
+C:\Users\1000880\Documents\GitHub\FrOG\FrOG\obj\Release\Opossum2_0_Proto_A.pdb

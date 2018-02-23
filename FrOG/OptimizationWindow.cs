@@ -16,7 +16,7 @@ namespace FrOG
             //Refers to the FrOG Window: Do not rename!!!
             InitializeComponent();
 
-            //Referes to the FrOG component on the Grasshopper canvas
+            //Refers to the FrOG component on the Grasshopper canvas
             _frogComponent = component;
 
             //Fill and set Combobox
@@ -88,8 +88,6 @@ namespace FrOG
             OptimizationLoop.BolLog = CheckBoxLog.Checked;
             if (CheckBoxLog.Checked) OptimizationLoop.LogName = textBoxLogName.Text;
 
-            OptimizationLoop.SaveStateName = textBoxStateName.Text;
-            OptimizationLoop.SaveStateFrequency = (int)numUpDownSaveStateFrequency.Value;
             OptimizationLoop.BolMaximize = radioButtonMaximize.Checked;
             OptimizationLoop.ExpertSettings = textBoxExpertSettings.Text.Replace(Environment.NewLine, " ");
             OptimizationLoop.PresetIndex = comboBoxPresets.SelectedIndex;

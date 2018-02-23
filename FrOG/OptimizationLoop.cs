@@ -29,12 +29,11 @@ namespace FrOG
         //BolLog Settings
         public static bool BolLog;
         public static string LogName;
-        public static string SaveStateName;
-        public static int SaveStateFrequency;
 
         //Variables
         private static BackgroundWorker _worker;
-        private static GrasshopperInOut _ghInOut;
+        public static OptimizationComponent _component; //do not change name -- suggestion Component overlaps with System.ComponentModel.Component
+
         private static int _iterations;
         private static int _iterationsCurrentBest;
         private static double _bestValue;
@@ -56,18 +55,21 @@ namespace FrOG
 
             //Get worker and component
             _worker = sender as BackgroundWorker;
-            var component = (OptimizationComponent)e.Argument;
+            _component = (OptimizationComponent)e.Argument;
 
-            if (component == null)
+            if (_component == null)
             {
                 MessageBox.Show("FrOG Component not set to an object", "FrOG Error");
                 return;
             }
 
             //Setup Variables
-            _ghInOut = new GrasshopperInOut(component);
-            if (!_ghInOut.SetInputs() || !_ghInOut.SetOutput()) return;
-            //MessageBox.Show(_ghInOut.VariablesStr, "FrOG Variables");
+            _component.GhInOut_Instantiate();
+            if (!_component.GhInOut.SetInputs() || !_component.GhInOut.SetOutput())
+            {
+                MessageBox.Show("Getting Variables and/or Objective failed", "Opossum Error");
+                return;
+            }
 
             //Main Loop
             var finishedRuns = 0;
@@ -101,7 +103,7 @@ namespace FrOG
             if (double.IsPositiveInfinity(bestResult.Value) || double.IsNegativeInfinity(bestResult.Value)) return;
 
             //Set Grasshopper model to best value
-            _ghInOut.NewSolution(bestResult.Parameters);
+            _component.GhInOut.NewSolution(bestResult.Parameters);
 
             //Show Result Message Box
             if (!BolRuns)
@@ -112,7 +114,7 @@ namespace FrOG
             _worker?.CancelAsync();
         }
 
-        //Run RBFOpt(Main function)
+        //Run Solver (Main function)
         private static OptimizationResult RunOptimizationLoop(BackgroundWorker worker, int presetIndex)
         {
             _iterations = 0;
@@ -122,7 +124,7 @@ namespace FrOG
             _resultType = OptimizationResult.ResultType.Unknown;
 
             //Get variables
-            var variables = _ghInOut.Variables;
+            var variables = _component.GhInOut.Variables;
             //MessageBox.Show($"Parameter String: {variables}", "FrOG Parameters");
 
             //Stopwatches
@@ -139,14 +141,14 @@ namespace FrOG
             var preset = SolverList.GetPresetByIndex(presetIndex);
 
             //Prepare Log
-            _log = BolLog ? new Log($"{Path.GetDirectoryName(_ghInOut.DocumentPath)}\\{LogName}.txt") : null;
+            _log = BolLog ? new Log($"{Path.GetDirectoryName(_component.GhInOut.DocumentPath)}\\{LogName}.txt") : null;
 
             //Log Settings       
             _log?.LogSettings(preset);
 
             //Run Solver
             //MessageBox.Show("Starting Solver", "FrOG Debug");
-            var bolSolverStarted = solver.RunSolver(variables, EvaluateFunction, preset, _ghInOut.ComponentFolder, _ghInOut.DocumentPath);
+            var bolSolverStarted = solver.RunSolver(variables, EvaluateFunction, preset, _component.GhInOut.ComponentFolder, _component.GhInOut.DocumentPath);
 
             if (!bolSolverStarted)
             {
@@ -195,10 +197,10 @@ namespace FrOG
 
             //Run a new solution
             if (_worker.CancellationPending) return double.NaN;
-            _ghInOut.NewSolution(values);
+            _component.GhInOut.NewSolution(values);
 
             //Evaluate Function
-            var objectiveValue = _ghInOut.GetObjectiveValue();
+            var objectiveValue = _component.GhInOut.GetObjectiveValue();
             if (double.IsNaN(objectiveValue))
             {
                 _resultType = OptimizationResult.ResultType.FrogStopped;
@@ -239,6 +241,9 @@ namespace FrOG
                 return double.NaN;
             }
             //Maximum Evaluations reached
+
+            MessageBox.Show($"{BolMaxIter} {_iterations}/{MaxIter}");
+
             if (BolMaxIter && _iterations >= MaxIter)
             {
                 _resultType = OptimizationResult.ResultType.MaximumEvals;
@@ -250,7 +255,7 @@ namespace FrOG
                 _resultType = OptimizationResult.ResultType.MaximumTime;
                 return double.NaN;
             }
-            //Else: Pass result to RBFOpt
+            //Else: Pass result to Solver
             _stopwatchLoop.Reset();
             _stopwatchLoop.Start();
 

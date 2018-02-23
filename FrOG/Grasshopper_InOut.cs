@@ -24,7 +24,6 @@ namespace FrOG
 
         public OptimizationComponent OptimizationComponent { get; private set; }
        
-
         //Variables as String
         public string VariablesStr
         {
@@ -307,7 +306,7 @@ namespace FrOG
             //var strMessage = "Starting new solution" + Environment.NewLine;
             //MessageBox.Show(strMessage);
 
-            _doc.ScheduleSolution(1);
+            _doc.NewSolution(true);
 
             //strMessage = "Started new solution" + Environment.NewLine;
             //MessageBox.Show(strMessage);

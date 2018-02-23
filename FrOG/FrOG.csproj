@@ -7,8 +7,8 @@
     <ProjectGuid>{A782148A-EB38-4847-A7E5-196E038C416C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Opossum2_0_Proto_A</RootNamespace>
-    <AssemblyName>Opossum2_0_Proto_A</AssemblyName>
+    <RootNamespace>FrOG</RootNamespace>
+    <AssemblyName>FrOG</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -29,7 +29,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>C:\Opossum\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -46,6 +46,10 @@
       <HintPath>D:\Dropbox\Opossum_Development\Ressources\Grasshopper.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MetaheuristicsLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Dropbox\Opossum_Development\Ressources\MetaheuristicsLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,8 +60,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hillclimber.cs" />
-    <Compile Include="HillclimberInterface.cs" />
+    <Compile Include="LoggerLog.cs" />
+    <Compile Include="Solvers\HillclimberAlgorithm.cs" />
+    <Compile Include="Solvers\Hillclimber.cs" />
     <Compile Include="Parsing.cs" />
     <Compile Include="OptimizationWindow.cs">
       <SubType>Form</SubType>
@@ -77,6 +82,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SolverInterface.cs" />
+    <Compile Include="Solvers\SimpleGA.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="OptimizationWindow.resx">

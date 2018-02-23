@@ -10,18 +10,19 @@ namespace FrOG
     public class OptimizationComponent : GH_Component
     {
         #region Variables
-        internal OptimizationWindow OptimizationWindow;
-        internal GrasshopperInOut GhInOut;
+        private OptimizationWindow _optimizationWindow;
 
-        //Generate Component GUID
-        public override Guid ComponentGuid => new Guid("{3e71c19a-1ea2-482a-be9a-9297d97d2711}");
+        public override Guid ComponentGuid 
+        {
+            get { return new Guid("{9975d89e-9b54-4de5-95ac-d672f3998f69}"); }
+        }
         #endregion
 
         #region Constructor
         public OptimizationComponent() : base("FrOG 0.1", "Framework for Optimization in Grasshopper", "FrOG provides an interface for the easy implementation of black-box optimization algorithms in Grasshopper.\n\nBlack-box algorithms optimize problems soley based on inputs and outputs.", "Params", "Util")
         {
             NewInstanceGuid();
-            OptimizationWindow = null;
+            _optimizationWindow = null;
         }
 
         protected override void RegisterInputParams(GH_InputParamManager pManager)
@@ -64,25 +65,20 @@ namespace FrOG
 
             var owner = Grasshopper.Instances.DocumentEditor;
 
-            if (OptimizationWindow == null || OptimizationWindow.IsDisposed)
+            if (_optimizationWindow == null || _optimizationWindow.IsDisposed)
             {
-                OptimizationWindow = new OptimizationWindow(this) { StartPosition = FormStartPosition.Manual };
+                _optimizationWindow = new OptimizationWindow(this) { StartPosition = FormStartPosition.Manual };
 
-                GH_WindowsFormUtil.CenterFormOnWindow(OptimizationWindow, owner, true);
-                owner.FormShepard.RegisterForm(OptimizationWindow);
+                GH_WindowsFormUtil.CenterFormOnWindow(_optimizationWindow, owner, true);
+                owner.FormShepard.RegisterForm(_optimizationWindow);
 
             }
-            OptimizationWindow.Show(owner);
-        }
-
-        //Create GhInOut
-        public void GhInOut_Instantiate()
-        {
-            GhInOut = new GrasshopperInOut(this);
+            _optimizationWindow.Show(owner);
         }
 
         protected override void SolveInstance(IGH_DataAccess da)
         {
+            //da.SetData(0, this);
         }
         #endregion
 

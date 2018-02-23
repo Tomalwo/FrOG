@@ -20,9 +20,10 @@ namespace FrOG
         private IGH_Param _output;
 
         public List<Variable> Variables { get; private set; }
-        public int VariableN => Variables.Count;
+        public int VariableN { get { return Variables.Count; } }
 
-        public OptimizationComponent OptimizationComponent { get; }
+        public OptimizationComponent OptimizationComponent { get; private set; }
+       
 
         //Variables as String
         public string VariablesStr
@@ -34,10 +35,13 @@ namespace FrOG
         }
 
         //Get Component Directory
-        public string ComponentFolder { get; }
+        public string ComponentFolder { get; private set; }
 
         //Get Document Directory
-        public string DocumentPath => _doc.FilePath;
+        public string DocumentPath { get { return _doc.FilePath; } }
+
+        //Get Document Name
+        public string DocumentName { get { return _doc.DisplayName; } }
 
         public GrasshopperInOut(OptimizationComponent component)
         {
@@ -181,7 +185,7 @@ namespace FrOG
             //Check Variable Number
             if (parameters.Count != VariableN)
             {
-                MessageBox.Show($"Wrong number of parameters({Sliders.Count}): {parameters.Count}" + Environment.NewLine + $"Parameters: {VariableN}", "FrOG Error");
+                MessageBox.Show(String.Format("Wrong number of parameters({0}): {1}" + Environment.NewLine + "Parameters: {2}", Sliders.Count, parameters.Count, VariableN), "FrOG Error");
                 return false;
             }
 
@@ -201,19 +205,19 @@ namespace FrOG
             //Check Integer
             if (integer && param % 1 != 0)
             {
-                MessageBox.Show($"Wrong parameter type(int: {param})", "FrOG Error");
+                MessageBox.Show(String.Format("Wrong parameter type(int: {0})", param), "FrOG Error");
                 return false;
             }
             //Check lower Bound
             if (param < lowerB)
             {
-                MessageBox.Show($"Parameter is too small (lower Bound {lowerB}: {param})", "FrOG Error");
+                MessageBox.Show(String.Format("Parameter is too small (lower Bound {0}: {1})", lowerB, param), "FrOG Error");
                 return false;
             }
             //Check upper Bound
             if (param > upperB)
             {
-                MessageBox.Show($"Parameter is too large (upper Bound {upperB}: {param})", "FrOG Error");
+                MessageBox.Show(String.Format("Parameter is too large (upper Bound {0}: {1})", upperB, param), "FrOG Error");
                 return false;
             }
 
@@ -303,7 +307,7 @@ namespace FrOG
             //var strMessage = "Starting new solution" + Environment.NewLine;
             //MessageBox.Show(strMessage);
 
-            _doc.NewSolution(true);
+            _doc.ScheduleSolution(1);
 
             //strMessage = "Started new solution" + Environment.NewLine;
             //MessageBox.Show(strMessage);

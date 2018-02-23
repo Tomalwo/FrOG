@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FrOG
+namespace FrOG.Solvers
 {
-    public class HillclimberInterface : ISolver
+    public class Hillclimber : ISolver
     {
         /// <summary>
         /// Variable vector of final solution.
@@ -19,7 +19,7 @@ namespace FrOG
 
         private readonly Dictionary<string, Dictionary<string, double>> _presets = new Dictionary<string, Dictionary<string, double>>();
 
-        public HillclimberInterface()
+        public Hillclimber()
         {
             //Prepare settings
             var standardSettings = new Dictionary<string, double>
@@ -34,9 +34,11 @@ namespace FrOG
             _presets.Add("Hillclimber", standardSettings);
         }
 
-        public bool RunSolver(List<Variable> variables, Func<IList<decimal>, double> evaluate, string preset, string installFolder, string documentPath)
+        public bool RunSolver(List<Variable> variables, Func<IList<decimal>, double> evaluate, string preset, string expertsettings, string installFolder, string documentPath)
         {
             var settings = _presets[preset];
+
+            //System.Windows.Forms.MessageBox.Show(expertsettings);     //use expertsettings to input custom solver parameters
 
             var dvar = variables.Count;
             var lb = new double[dvar];
@@ -61,7 +63,7 @@ namespace FrOG
                 var seed = (int) settings["seed"];
                 var stepsize = settings["stepsize"];
                 var itermax = (int) settings["itermax"];
-                var hc = new Hillclimber(lb, ub, stepsize, itermax, eval, seed);
+                var hc = new HillclimberAlgorithm(lb, ub, stepsize, itermax, eval, seed);
                 hc.Solve();
                 Xopt = hc.get_Xoptimum();
                 Fxopt = hc.get_fxoptimum();
@@ -88,11 +90,6 @@ namespace FrOG
         {
             return Xopt;
         }
-
-        /// <summary>
-        /// Get the cost value of the final solution.
-        /// </summary>
-        /// <returns>Cost value.</returns>
 
         public IEnumerable<string> GetPresetNames()
         {

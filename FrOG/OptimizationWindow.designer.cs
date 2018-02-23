@@ -32,9 +32,9 @@ namespace FrOG
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptimizationWindow));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
             this.tabOptimize = new System.Windows.Forms.TabPage();
@@ -126,30 +126,30 @@ namespace FrOG
             // bestValueChart
             // 
             this.bestValueChart.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.LineWidth = 0;
-            chartArea2.AxisX2.LineWidth = 0;
-            chartArea2.AxisY.LineWidth = 0;
-            chartArea2.AxisY2.LineWidth = 0;
-            chartArea2.BorderWidth = 0;
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 100F;
-            chartArea2.InnerPlotPosition.Width = 100F;
-            chartArea2.IsSameFontSizeForAllAxes = true;
-            chartArea2.Name = "ChartArea1";
-            chartArea2.Position.Auto = false;
-            chartArea2.Position.Height = 100F;
-            chartArea2.Position.Width = 100F;
-            this.bestValueChart.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.bestValueChart.Legends.Add(legend2);
+            chartArea1.AxisX.LineWidth = 0;
+            chartArea1.AxisX2.LineWidth = 0;
+            chartArea1.AxisY.LineWidth = 0;
+            chartArea1.AxisY2.LineWidth = 0;
+            chartArea1.BorderWidth = 0;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 100F;
+            chartArea1.InnerPlotPosition.Width = 100F;
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 100F;
+            chartArea1.Position.Width = 100F;
+            this.bestValueChart.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.bestValueChart.Legends.Add(legend1);
             resources.ApplyResources(this.bestValueChart, "bestValueChart");
             this.bestValueChart.Name = "bestValueChart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.bestValueChart.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.bestValueChart.Series.Add(series1);
             // 
             // groupOptimizationStartStop
             // 
@@ -327,7 +327,7 @@ namespace FrOG
             // 
             resources.ApplyResources(this.numUpDownIterations, "numUpDownIterations");
             this.numUpDownIterations.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -342,6 +342,7 @@ namespace FrOG
             0,
             0,
             0});
+            this.numUpDownIterations.ValueChanged += new System.EventHandler(this.numUpDownIterations_ValueChanged);
             // 
             // CheckBoxDuration
             // 
@@ -378,6 +379,7 @@ namespace FrOG
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBoxExpertSettings
             // 
@@ -397,6 +399,7 @@ namespace FrOG
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.Tabs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "OptimizationWindow";
             this.Load += new System.EventHandler(this.FrOGWindow_Load);
             this.tabOptimize.ResumeLayout(false);

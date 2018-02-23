@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FrOG
+namespace FrOG.Solvers
 {
-    public class Hillclimber
+    public class HillclimberAlgorithm
     {
         //source: Stochastic Hill-Climbing, in: Clever Algorithms: Nature-Inspired Programming Recipes (Jason Brownlee)
         //
@@ -61,7 +57,7 @@ namespace FrOG
         /// <param name="itermax">Maximum iterations.</param>
         /// <param name="evalfnc">Evaluation function.</param>
         /// <param name="seed">Seed for random number generator.</param>
-        public Hillclimber(double [] lb, double [] ub, double stepsize, int itermax, Func<double[], double> evalfnc, int seed)
+        public HillclimberAlgorithm(double [] lb, double [] ub, double stepsize, int itermax, Func<double[], double> evalfnc, int seed)
         {
             this.lb = lb;
             this.ub = ub;
@@ -99,17 +95,18 @@ namespace FrOG
                 }
                 double fxtest = evalfnc(xtest);
 
+                if (double.IsNaN(fxtest)) return;
+
                 if (fxtest < fx)
                 {
                     xtest.CopyTo(x, 0);
                     fx = fxtest;
+
+                    xopt = new double[n];
+                    x.CopyTo(xopt, 0);
+                    fxopt = fx;
                 }
             }
-
-            xopt = new double[n];
-            x.CopyTo(xopt, 0);
-            fxopt = fx;
-
         }
 
         /// <summary>
@@ -157,20 +154,6 @@ namespace FrOG
 
         }
 
-        /// <summary>
-        /// Normal distributed random number, normalized between 0 and 1. Assuming range: -5 to +5.
-        /// </summary>
-        /// <param name="mean">Mean of the distribution.</param>
-        /// <param name="stdDev">Standard deviation of the distribution.</param>
-        /// <returns>Normal distributed random number, normalized between 0 and 1.</returns>
-        /// 
-        public double NextGaussianNorm(double mean, double stdDev)
-        {
-            double gauss = this.NextGaussian(mean, stdDev);
-            if (gauss < -5) gauss = -5;
-            else if (gauss > 5) gauss = 5;
-            return (gauss + 5) / 10;
-        }
 
     }
 }

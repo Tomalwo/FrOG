@@ -24,7 +24,7 @@ namespace FrOG
             var isDouble = double.TryParse(str, NumberStyles.Integer | NumberStyles.AllowDecimalPoint | NumberStyles.Float, CultureInfo.InvariantCulture, out val);
             if (isDouble) return val;
 
-            MessageBox.Show($"Wrong parameter type(double or int) for parse to double: {str})", "FrOG Parse Error");
+            MessageBox.Show(String.Format("Wrong parameter type(double or int) for parse to double: {0})", str), "FrOG Parse Error");
             return double.NaN;
         }
 

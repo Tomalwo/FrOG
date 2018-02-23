@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrOG.Solvers;
 
 namespace FrOG
 {
     internal static class SolverList
     {
-        public static List<ISolver> GetSolverList => new List<ISolver>
-        {
-            new HillclimberInterface()    
-        };
+        //Add solvers here
+        public static List<ISolver> GetSolverList = new List<ISolver>() { new Hillclimber(), new SimpleGA() };
 
         public static List<string> PresetNames
         {
@@ -61,7 +60,7 @@ namespace FrOG
 
         public override string ToString()
         {
-            return $"LowerB {LowerB} UpperB {UpperB} Integer {Integer}";
+            return string.Format("LowerB {0} UpperB {1} Integer {2}", LowerB, UpperB, Integer);
         }
     }
 
@@ -83,7 +82,7 @@ namespace FrOG
         //This is where most of the work is done.
         //The constructor should do only minimal work, since all solvers are instanced when the FrOG window loads.
 
-        bool RunSolver(List<Variable> variables, Func<IList<decimal>,double> evaluate, string preset, string installFolder, string documentPath);
+        bool RunSolver(List<Variable> variables, Func<IList<decimal>,double> evaluate, string preset, string expertsettings, string installFolder, string documentPath);
 
         //Return eventual error messages to show in MessageBox after the solver stopped, otherwise return empty.
         string GetErrorMessage();

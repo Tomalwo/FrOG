@@ -174,105 +174,6 @@
   <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;labelBestValue.Name" xml:space="preserve">
-    <value>labelBestValue</value>
-  </data>
-  <data name="&gt;&gt;labelBestValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelBestValue.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;labelBestValue.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelIteration.Name" xml:space="preserve">
-    <value>labelIteration</value>
-  </data>
-  <data name="&gt;&gt;labelIteration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelIteration.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;labelIteration.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;bestValueChart.Name" xml:space="preserve">
-    <value>bestValueChart</value>
-  </data>
-  <data name="&gt;&gt;bestValueChart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;bestValueChart.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;bestValueChart.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.Name" xml:space="preserve">
-    <value>groupOptimizationStartStop</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationAlgorithm.Name" xml:space="preserve">
-    <value>GroupOptimizationAlgorithm</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationAlgorithm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationAlgorithm.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationAlgorithm.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.Name" xml:space="preserve">
-    <value>GroupOptimizationType</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tabOptimize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabOptimize.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabOptimize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 167</value>
-  </data>
-  <data name="tabOptimize.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabOptimize.Text" xml:space="preserve">
-    <value>Optimize!</value>
-  </data>
-  <data name="&gt;&gt;tabOptimize.Name" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;tabOptimize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabOptimize.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;tabOptimize.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="labelBestValue.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -351,54 +252,6 @@
   <data name="&gt;&gt;bestValueChart.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;buttonStop.Name" xml:space="preserve">
-    <value>buttonStop</value>
-  </data>
-  <data name="&gt;&gt;buttonStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStop.Parent" xml:space="preserve">
-    <value>groupOptimizationStartStop</value>
-  </data>
-  <data name="&gt;&gt;buttonStop.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Name" xml:space="preserve">
-    <value>ButtonStart</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Parent" xml:space="preserve">
-    <value>groupOptimizationStartStop</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupOptimizationStartStop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 116</value>
-  </data>
-  <data name="groupOptimizationStartStop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 49</value>
-  </data>
-  <data name="groupOptimizationStartStop.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="groupOptimizationStartStop.Text" xml:space="preserve">
-    <value>Run Optimization</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.Name" xml:space="preserve">
-    <value>groupOptimizationStartStop</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;groupOptimizationStartStop.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="buttonStop.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
@@ -453,6 +306,39 @@
   <data name="&gt;&gt;ButtonStart.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="groupOptimizationStartStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 116</value>
+  </data>
+  <data name="groupOptimizationStartStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 49</value>
+  </data>
+  <data name="groupOptimizationStartStop.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupOptimizationStartStop.Text" xml:space="preserve">
+    <value>Run Optimization</value>
+  </data>
+  <data name="&gt;&gt;groupOptimizationStartStop.Name" xml:space="preserve">
+    <value>groupOptimizationStartStop</value>
+  </data>
+  <data name="&gt;&gt;groupOptimizationStartStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupOptimizationStartStop.Parent" xml:space="preserve">
+    <value>tabOptimize</value>
+  </data>
+  <data name="&gt;&gt;groupOptimizationStartStop.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="comboBoxPresets.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="comboBoxPresets.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 21</value>
+  </data>
+  <data name="comboBoxPresets.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;comboBoxPresets.Name" xml:space="preserve">
     <value>comboBoxPresets</value>
   </data>
@@ -488,75 +374,6 @@
   </data>
   <data name="&gt;&gt;GroupOptimizationAlgorithm.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="comboBoxPresets.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="comboBoxPresets.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
-  </data>
-  <data name="comboBoxPresets.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPresets.Name" xml:space="preserve">
-    <value>comboBoxPresets</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPresets.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPresets.Parent" xml:space="preserve">
-    <value>GroupOptimizationAlgorithm</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPresets.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMinimize.Name" xml:space="preserve">
-    <value>radioButtonMinimize</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMinimize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMinimize.Parent" xml:space="preserve">
-    <value>GroupOptimizationType</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMinimize.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMaximize.Name" xml:space="preserve">
-    <value>radioButtonMaximize</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMaximize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMaximize.Parent" xml:space="preserve">
-    <value>GroupOptimizationType</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMaximize.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GroupOptimizationType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="GroupOptimizationType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 49</value>
-  </data>
-  <data name="GroupOptimizationType.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="GroupOptimizationType.Text" xml:space="preserve">
-    <value>Optimization Type</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.Name" xml:space="preserve">
-    <value>GroupOptimizationType</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.Parent" xml:space="preserve">
-    <value>tabOptimize</value>
-  </data>
-  <data name="&gt;&gt;GroupOptimizationType.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="radioButtonMinimize.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -615,259 +432,59 @@
   <data name="&gt;&gt;radioButtonMaximize.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="GroupOptimizationType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
   </data>
-  <data name="&gt;&gt;Benchmarking.Name" xml:space="preserve">
-    <value>Benchmarking</value>
+  <data name="GroupOptimizationType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 49</value>
   </data>
-  <data name="&gt;&gt;Benchmarking.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Benchmarking.Parent" xml:space="preserve">
-    <value>tabSettings</value>
-  </data>
-  <data name="&gt;&gt;Benchmarking.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.Name" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.Parent" xml:space="preserve">
-    <value>tabSettings</value>
-  </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 167</value>
-  </data>
-  <data name="tabSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabSettings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;tabSettings.Name" xml:space="preserve">
-    <value>tabSettings</value>
-  </data>
-  <data name="&gt;&gt;tabSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabSettings.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;tabSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBoxExpertSettings.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
-  </data>
-  <data name="textBoxExpertSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 47</value>
-  </data>
-  <data name="textBoxExpertSettings.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBoxExpertSettings.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="textBoxExpertSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 108</value>
-  </data>
-  <data name="textBoxExpertSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxExpertSettings.Name" xml:space="preserve">
-    <value>textBoxExpertSettings</value>
-  </data>
-  <data name="&gt;&gt;textBoxExpertSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxExpertSettings.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;textBoxExpertSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Use this text box to override FrOG’s settings 
-with command line arguments.
-</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 161</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Expert Settings</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>tabExpert</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabExpert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabExpert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 167</value>
-  </data>
-  <data name="tabExpert.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabExpert.Text" xml:space="preserve">
-    <value>Expert</value>
-  </data>
-  <data name="&gt;&gt;tabExpert.Name" xml:space="preserve">
-    <value>tabExpert</value>
-  </data>
-  <data name="&gt;&gt;tabExpert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabExpert.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;tabExpert.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, -2</value>
-  </data>
-  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 193</value>
-  </data>
-  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+  <data name="GroupOptimizationType.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
-    <value>Tabs</value>
+  <data name="GroupOptimizationType.Text" xml:space="preserve">
+    <value>Optimization Type</value>
   </data>
-  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GroupOptimizationType.Name" xml:space="preserve">
+    <value>GroupOptimizationType</value>
   </data>
-  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBoxLogName.Name" xml:space="preserve">
-    <value>textBoxLogName</value>
-  </data>
-  <data name="&gt;&gt;textBoxLogName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxLogName.Parent" xml:space="preserve">
-    <value>Benchmarking</value>
-  </data>
-  <data name="&gt;&gt;textBoxLogName.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;numUpDownRuns.Name" xml:space="preserve">
-    <value>numUpDownRuns</value>
-  </data>
-  <data name="&gt;&gt;numUpDownRuns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numUpDownRuns.Parent" xml:space="preserve">
-    <value>Benchmarking</value>
-  </data>
-  <data name="&gt;&gt;numUpDownRuns.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxRuns.Name" xml:space="preserve">
-    <value>CheckBoxRuns</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxRuns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxRuns.Parent" xml:space="preserve">
-    <value>Benchmarking</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxRuns.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxLog.Name" xml:space="preserve">
-    <value>CheckBoxLog</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxLog.Parent" xml:space="preserve">
-    <value>Benchmarking</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxLog.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Benchmarking.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 96</value>
-  </data>
-  <data name="Benchmarking.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 75</value>
-  </data>
-  <data name="Benchmarking.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="Benchmarking.Text" xml:space="preserve">
-    <value>Benchmarking</value>
-  </data>
-  <data name="&gt;&gt;Benchmarking.Name" xml:space="preserve">
-    <value>Benchmarking</value>
-  </data>
-  <data name="&gt;&gt;Benchmarking.Type" xml:space="preserve">
+  <data name="&gt;&gt;GroupOptimizationType.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Benchmarking.Parent" xml:space="preserve">
-    <value>tabSettings</value>
+  <data name="&gt;&gt;GroupOptimizationType.Parent" xml:space="preserve">
+    <value>tabOptimize</value>
   </data>
-  <data name="&gt;&gt;Benchmarking.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GroupOptimizationType.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabOptimize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabOptimize.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabOptimize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 167</value>
+  </data>
+  <data name="tabOptimize.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="tabOptimize.Text" xml:space="preserve">
+    <value>Optimize!</value>
+  </data>
+  <data name="&gt;&gt;tabOptimize.Name" xml:space="preserve">
+    <value>tabOptimize</value>
+  </data>
+  <data name="&gt;&gt;tabOptimize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabOptimize.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;tabOptimize.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="textBoxLogName.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -980,101 +597,29 @@ with command line arguments.
   <data name="&gt;&gt;CheckBoxLog.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;numUpDownDuration.Name" xml:space="preserve">
-    <value>numUpDownDuration</value>
+  <data name="Benchmarking.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 96</value>
   </data>
-  <data name="&gt;&gt;numUpDownDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Benchmarking.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 75</value>
   </data>
-  <data name="&gt;&gt;numUpDownDuration.Parent" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
+  <data name="Benchmarking.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
-  <data name="&gt;&gt;numUpDownDuration.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="Benchmarking.Text" xml:space="preserve">
+    <value>Benchmarking</value>
   </data>
-  <data name="&gt;&gt;numUpDownImprovement.Name" xml:space="preserve">
-    <value>numUpDownImprovement</value>
+  <data name="&gt;&gt;Benchmarking.Name" xml:space="preserve">
+    <value>Benchmarking</value>
   </data>
-  <data name="&gt;&gt;numUpDownImprovement.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numUpDownImprovement.Parent" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;numUpDownImprovement.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;numUpDownIterations.Name" xml:space="preserve">
-    <value>numUpDownIterations</value>
-  </data>
-  <data name="&gt;&gt;numUpDownIterations.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numUpDownIterations.Parent" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;numUpDownIterations.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxDuration.Name" xml:space="preserve">
-    <value>CheckBoxDuration</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxDuration.Parent" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxDuration.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxImprovement.Name" xml:space="preserve">
-    <value>CheckBoxImprovement</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxImprovement.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxImprovement.Parent" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxImprovement.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxIterations.Name" xml:space="preserve">
-    <value>CheckBoxIterations</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxIterations.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxIterations.Parent" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxIterations.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Settings_Stopping_Conditions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Settings_Stopping_Conditions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 97</value>
-  </data>
-  <data name="Settings_Stopping_Conditions.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Settings_Stopping_Conditions.Text" xml:space="preserve">
-    <value>Stop optimization if</value>
-  </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.Name" xml:space="preserve">
-    <value>Settings_Stopping_Conditions</value>
-  </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.Type" xml:space="preserve">
+  <data name="&gt;&gt;Benchmarking.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Benchmarking.Parent" xml:space="preserve">
     <value>tabSettings</value>
   </data>
-  <data name="&gt;&gt;Settings_Stopping_Conditions.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;Benchmarking.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="numUpDownDuration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1247,6 +792,183 @@ with command line arguments.
   <data name="&gt;&gt;CheckBoxIterations.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="Settings_Stopping_Conditions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Settings_Stopping_Conditions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 97</value>
+  </data>
+  <data name="Settings_Stopping_Conditions.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Settings_Stopping_Conditions.Text" xml:space="preserve">
+    <value>Stop optimization if</value>
+  </data>
+  <data name="&gt;&gt;Settings_Stopping_Conditions.Name" xml:space="preserve">
+    <value>Settings_Stopping_Conditions</value>
+  </data>
+  <data name="&gt;&gt;Settings_Stopping_Conditions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Settings_Stopping_Conditions.Parent" xml:space="preserve">
+    <value>tabSettings</value>
+  </data>
+  <data name="&gt;&gt;Settings_Stopping_Conditions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 167</value>
+  </data>
+  <data name="tabSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;tabSettings.Name" xml:space="preserve">
+    <value>tabSettings</value>
+  </data>
+  <data name="&gt;&gt;tabSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabSettings.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;tabSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxExpertSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="textBoxExpertSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 47</value>
+  </data>
+  <data name="textBoxExpertSettings.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxExpertSettings.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="textBoxExpertSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 108</value>
+  </data>
+  <data name="textBoxExpertSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textBoxExpertSettings.Name" xml:space="preserve">
+    <value>textBoxExpertSettings</value>
+  </data>
+  <data name="&gt;&gt;textBoxExpertSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxExpertSettings.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;textBoxExpertSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Use this text box to override specific solver settings.</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 161</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Expert Settings</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>tabExpert</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabExpert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabExpert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 167</value>
+  </data>
+  <data name="tabExpert.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabExpert.Text" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="&gt;&gt;tabExpert.Name" xml:space="preserve">
+    <value>tabExpert</value>
+  </data>
+  <data name="&gt;&gt;tabExpert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabExpert.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;tabExpert.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, -2</value>
+  </data>
+  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 193</value>
+  </data>
+  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="backgroundWorkerSolver.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -1259,84 +981,8 @@ with command line arguments.
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>384, 225</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMmZAADJmQAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAagAA
-        ANIAAEnyAABH8gAAAM8AAABiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AJ4AACv/AADL/wAA9P8AAPP/AADH/wAAJv8AAACVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAACjAAAL/wAAxv8AAPr/AADL/wAAzP8AAP3/AAC+/wAAB/8AAACaAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAABAAAArQAAAP8AACf/AADx/wAAzf8AAMz/AADM/wAAz/8AAOv/AAAc/wAAAP8AAACjAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAQwAAANUAAAD/AAAA/zg4d/8AAO7/AADM/wAAzP8AAMz/AADN/wAA7f82Nm3/AAAA/wAA
-        AP8AAADPAAAAPQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAOAAAAK4AAAD/AAAA/wAAAP+QkIP//////xkZ1v8AAMj/AADM/wAAzP8AAMj/JSXZ////
-        //+EhHr/AAAA/wAAAP8AAAD/AAAAqAAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAACAAAAJ0AAAD/AAAA/wAAAP8vLy//sbGx///////8/OT/v7/U/ygozv8AAM3/AADN/y0t
-        zv/GxtT/+/vm//////+rq6v/Kysr/wAAAP8AAAD/AAAA/wAAAJcAAAADAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAA8AAADaAAAA/wAAAP8jIyP/i4uL/+Pj4//y8vL/ysrL/8bGyf/q6s3/1dXO/56e
-        zP+fn8z/2NjO/+jozf/Gxsn/y8vM//T09P/f39//h4eH/x8fH/8AAAD/AAAA/wAAANIAAAAJAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAtgAAAP8AAAD/ampq/9LS0v/o6Oj/xsbG/7m5uf+8vLz/vLy9/7q6
-        vf/Hx73/2tq+/9ravv/Gxr3/ubm9/7y8vf+8vLz/ubm5/8jIyP/o6Oj/0NDQ/2NjY/8AAAD/AAAA/wAA
-        AKoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkAAAD/AAAA/2hoaP/v7+//wsLC/7CwsP+zs7P/tLS0/7S0
-        tP+0tLT/tLS0/7S0tP+0tLT/tLS0/7S0tP+0tLT/tLS0/7S0tP+0tLT/s7Oz/7CwsP/Dw8P/7u7u/19f
-        X/8AAAD/AAAA/wAAACAAAAAAAAAAAAAAAAAAAAAAAAAAkQAAAP8LCwv/u7u7/8XFxf+zs7P/tbW1/7W1
-        tf+1tbX/tbW1/7W1tf+0tLT/tLS0/7W1tf+1tbX/tLS0/7S0tP+1tbX/tbW1/7W1tf+1tbX/tbW1/7Oz
-        s//Jycn/tLS0/wYGBv8AAAD/AAAAhQAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/zw8PP/S0tL/tra2/7W1
-        tf+1tbX/tbW1/7m5uf/AwMD/y8vL/9TU1P/Jycn/r6+v/7CwsP/Kysr/1NTU/8rKyv/AwMD/ubm5/7W1
-        tf+1tbX/tbW1/7e3t//Pz8//MzMz/wAAAP8AAADPAAAAAAAAAAAAAAAAAAAAGQAAAP8AAAD/XV1d/9bW
-        1v/ExMT/0dHR/9fX1//U1NT/yMjI/7S0tP+ampr/dHR0/4ODg//CwsL/wMDA/39/f/92dnb/m5ub/7S0
-        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
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACUAAAA4wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANkAAAD6AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA8QAAAPMAAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANAAAABIAAAAlAAAANkAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAADXAAAAkAAAAEcAAADaAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADqAAAArQAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADoAAAAHAAAAAAAAAAAAAAAAAAAACIAAABCAAAAVAAA
-        AFMAAABBAAAAIAAAAAAAAAAAAAAAAAAAACQAAADwAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AKAAAAAbAAAA7wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAvAAAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AAADCAAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAADoAAAAFAAAAAAAAAAbAAAAlwAAAOcAAADsAAAApwAAAFIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABXAAAAqwAA
-        AO4AAADlAAAAlAAAABQAAAAA//gf///wD///4Af//4AD//8AAP/8AAA/8AAAD+AAAAfgAAAHwAAAA8AA
-        AAPAAAADgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABwAAAA8AAAAPAAAAD4AAAB8AAAAOAAAABAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAOBwAAH/+AIH//4E=
-</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>FrOG</value>
+    <value>FRoG Framework for Optimization in Grasshopper</value>
   </data>
   <data name="&gt;&gt;backgroundWorkerSolver.Name" xml:space="preserve">
     <value>backgroundWorkerSolver</value>

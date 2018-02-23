@@ -16,15 +16,19 @@ namespace FrOG
             //Refers to the FrOG Window: Do not rename!!!
             InitializeComponent();
 
-            //Refers to the FrOG component on the Grasshopper canvas
+            //Referes to the FrOG component on the Grasshopper canvas
             _frogComponent = component;
 
             //Fill and set Combobox
             foreach (var preset in SolverList.PresetNames) comboBoxPresets.Items.Add(preset);
             comboBoxPresets.SelectedIndex = 0;
 
+           
             //Log Default File Name
-            textBoxLogName.Text = $"{DateTime.Now.ToString("yyMMdd")}_log";
+            textBoxLogName.Text = String.Format("{0}_log", DateTime.Now.ToString("yyMMdd"));
+
+            //Hide Save State Tab
+            //Tabs.TabPages.Remove(Tabs.TabPages[3]);
 
             //Disable Chart Axis
             bestValueChart.ChartAreas[0].AxisX.Enabled = AxisEnabled.False;
@@ -70,6 +74,11 @@ namespace FrOG
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            //read expert settings
+            OptimizationLoop.solversettings = textBoxExpertSettings.Text;
+
+
+
             //Lock Buttons
             ButtonStart.Enabled = false;
             buttonOK.Enabled = false;
@@ -88,13 +97,15 @@ namespace FrOG
             OptimizationLoop.BolLog = CheckBoxLog.Checked;
             if (CheckBoxLog.Checked) OptimizationLoop.LogName = textBoxLogName.Text;
 
+            //OptimizationLoop.SaveStateName = textBoxStateName.Text;
+            //OptimizationLoop.SaveStateFrequency = (int)numUpDownSaveStateFrequency.Value;
             OptimizationLoop.BolMaximize = radioButtonMaximize.Checked;
             OptimizationLoop.ExpertSettings = textBoxExpertSettings.Text.Replace(Environment.NewLine, " ");
             OptimizationLoop.PresetIndex = comboBoxPresets.SelectedIndex;
 
             //Number of Runs
             OptimizationLoop.BolRuns = CheckBoxRuns.Checked;
-            if (CheckBoxRuns.Checked) OptimizationLoop.Runs = (int)numUpDownRuns.Value;
+            if (CheckBoxRuns.Checked) OptimizationLoop.Runs = Convert.ToInt32(numUpDownRuns.Value);
             else OptimizationLoop.Runs = 1;
 
             //Start Optimization
@@ -179,10 +190,20 @@ namespace FrOG
 
         private void comboBoxPresets_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            groupBox2.Text = SolverList.PresetNames[comboBoxPresets.SelectedIndex];
         }
 
         private void FrOGWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numUpDownIterations_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

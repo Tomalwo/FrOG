@@ -11,6 +11,14 @@ namespace FrOG
     {
         private readonly OptimizationComponent _frogComponent;
 
+        internal enum GrasshopperStates
+        {
+            RequestSent,
+            RequestProcessing,
+            RequestProcessed
+        }
+        internal GrasshopperStates GrasshopperStatus;
+
         public OptimizationWindow(OptimizationComponent component)
         {
             //Refers to the FrOG Window: Do not rename!!!
@@ -49,7 +57,7 @@ namespace FrOG
             //Initilize Backgroundworker
             //http://www.codeproject.com/Articles/634146/Background-Thread-Let-me-count-the-ways
             backgroundWorkerSolver.DoWork += OptimizationLoop.RunOptimizationLoopMultiple;
-            backgroundWorkerSolver.ProgressChanged += UpdateChart;
+            backgroundWorkerSolver.ProgressChanged += bw_ProgressChangedHandler;
             backgroundWorkerSolver.RunWorkerCompleted += ReleaseButtons;
             backgroundWorkerSolver.WorkerReportsProgress = true;
             backgroundWorkerSolver.WorkerSupportsCancellation = true;
@@ -77,8 +85,6 @@ namespace FrOG
             //read expert settings
             OptimizationLoop.solversettings = textBoxExpertSettings.Text;
 
-
-
             //Lock Buttons
             ButtonStart.Enabled = false;
             buttonOK.Enabled = false;
@@ -97,8 +103,6 @@ namespace FrOG
             OptimizationLoop.BolLog = CheckBoxLog.Checked;
             if (CheckBoxLog.Checked) OptimizationLoop.LogName = textBoxLogName.Text;
 
-            //OptimizationLoop.SaveStateName = textBoxStateName.Text;
-            //OptimizationLoop.SaveStateFrequency = (int)numUpDownSaveStateFrequency.Value;
             OptimizationLoop.BolMaximize = radioButtonMaximize.Checked;
             OptimizationLoop.ExpertSettings = textBoxExpertSettings.Text.Replace(Environment.NewLine, " ");
             OptimizationLoop.PresetIndex = comboBoxPresets.SelectedIndex;
@@ -121,6 +125,31 @@ namespace FrOG
             buttonOK.Enabled = true;
             buttonCancel.Enabled = true;
             buttonStop.Enabled = false;
+        }
+
+        //Progress Handler
+        private void bw_ProgressChangedHandler(object sender, ProgressChangedEventArgs e)
+        {
+            switch (e.ProgressPercentage)
+            {
+                case 0:
+                    UpdateGrasshopper(sender, e);
+                    break;
+                case 100:
+                    UpdateChart(sender, e);
+                    break;
+            }
+        }
+
+        //Update Grasshopper from here
+        private void UpdateGrasshopper(object sender, ProgressChangedEventArgs e)
+        {
+            GrasshopperStatus = GrasshopperStates.RequestProcessing;
+            IList<decimal> values = (IList<decimal>)e.UserState;
+            _frogComponent.GhInOut.NewSolution(values);
+            GrasshopperStatus = GrasshopperStates.RequestProcessed;
+
+            System.Threading.Thread.Sleep(100);
         }
 
         //Chart

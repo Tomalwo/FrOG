@@ -10,7 +10,8 @@ namespace FrOG
     public class OptimizationComponent : GH_Component
     {
         #region Variables
-        private OptimizationWindow _optimizationWindow;
+        internal OptimizationWindow OptimizationWindow;
+        internal GrasshopperInOut GhInOut;
 
         public override Guid ComponentGuid 
         {
@@ -22,7 +23,7 @@ namespace FrOG
         public OptimizationComponent() : base("FrOG 0.1", "Framework for Optimization in Grasshopper", "FrOG provides an interface for the easy implementation of black-box optimization algorithms in Grasshopper.\n\nBlack-box algorithms optimize problems soley based on inputs and outputs.", "Params", "Util")
         {
             NewInstanceGuid();
-            _optimizationWindow = null;
+            OptimizationWindow = null;
         }
 
         protected override void RegisterInputParams(GH_InputParamManager pManager)
@@ -65,15 +66,21 @@ namespace FrOG
 
             var owner = Grasshopper.Instances.DocumentEditor;
 
-            if (_optimizationWindow == null || _optimizationWindow.IsDisposed)
+            if (OptimizationWindow == null || OptimizationWindow.IsDisposed)
             {
-                _optimizationWindow = new OptimizationWindow(this) { StartPosition = FormStartPosition.Manual };
+                OptimizationWindow = new OptimizationWindow(this) { StartPosition = FormStartPosition.Manual };
 
-                GH_WindowsFormUtil.CenterFormOnWindow(_optimizationWindow, owner, true);
-                owner.FormShepard.RegisterForm(_optimizationWindow);
+                GH_WindowsFormUtil.CenterFormOnWindow(OptimizationWindow, owner, true);
+                owner.FormShepard.RegisterForm(OptimizationWindow);
 
             }
-            _optimizationWindow.Show(owner);
+            OptimizationWindow.Show(owner);
+        }
+
+        //Create GhInOut
+        public void GhInOut_Instantiate()
+        {
+            GhInOut = new GrasshopperInOut(this);
         }
 
         protected override void SolveInstance(IGH_DataAccess da)

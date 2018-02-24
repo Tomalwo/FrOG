@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Threading.Tasks;
 
 namespace FrOG
 {
@@ -142,14 +143,15 @@ namespace FrOG
         }
 
         //Update Grasshopper from here
-        private void UpdateGrasshopper(object sender, ProgressChangedEventArgs e)
+        private async void UpdateGrasshopper(object sender, ProgressChangedEventArgs e)
         {
             GrasshopperStatus = GrasshopperStates.RequestProcessing;
             IList<decimal> values = (IList<decimal>)e.UserState;
-            _frogComponent.GhInOut.NewSolution(values);
-            GrasshopperStatus = GrasshopperStates.RequestProcessed;
 
-            System.Threading.Thread.Sleep(100);
+            //Calculate Grasshoper Asynchronously
+            await Task.Run(() => _frogComponent.GhInOut.NewSolution(values));
+
+            GrasshopperStatus = GrasshopperStates.RequestProcessed;
         }
 
         //Chart

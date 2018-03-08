@@ -45,6 +45,9 @@ namespace FrOG
         private static LoggerLog _loggerLog;
         private static Stopwatch _stopwatchTotal;
         private static Stopwatch _stopwatchLoop;
+        private static double _stopwatchPreviousMilliseconds;
+        private static double _updateFrequency = 100;
+        private static double _updateElapsed;
 
         //List of Best Values
         private static readonly List<double> BestValues = new List<double>();
@@ -152,6 +155,7 @@ namespace FrOG
             _stopwatchTotal = Stopwatch.StartNew();
             _stopwatchLoop = Stopwatch.StartNew();
             _stopwatchTotal.Start();
+            _stopwatchPreviousMilliseconds = _updateFrequency;
 
             //Clear Best Value List
             BestValues.Clear();
@@ -219,6 +223,7 @@ namespace FrOG
             if(_log!=null) _log.LogParameters(string.Join(",", values), _stopwatchLoop);
             //_log?.LogParameters(string.Join(",", values), _stopwatchLoop);
 
+            _updateElapsed = _stopwatchTotal.ElapsedMilliseconds - _stopwatchPreviousMilliseconds;
             _stopwatchLoop.Reset();
             _stopwatchLoop.Start();
 
@@ -261,8 +266,18 @@ namespace FrOG
 
             BestValues.Add(_bestValue);
 
-            //Report Best Values 
-            _worker.ReportProgress(100, BestValues);
+            //Report Best Values and Redraw Chart
+            //only if the elapsed time from stopwatch is larger than the frequency set. (prevents hanging the GUI for OpossumWindow)
+
+            Debug.WriteLine($"Elapsed {_updateElapsed} Limit {_updateFrequency}");
+
+            if (_updateElapsed > _updateFrequency)
+            {    
+                _worker.ReportProgress(100, BestValues);
+                _updateElapsed = 0;
+                _stopwatchPreviousMilliseconds = _stopwatchTotal.ElapsedMilliseconds;
+                Debug.WriteLine($"Progress reported, Elapsed {_updateElapsed}");
+            }
 
             //BolLog Minimum
             if(_log!=null) _log.LogCurrentBest(_bestParams, _bestValue, _stopwatchTotal, _iterationsCurrentBest);
